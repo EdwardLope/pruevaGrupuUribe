@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { titulares } from '../../database/dataBase'
 
 function Inicio() {
-
     const [clientes, setClientes] = useState([]);
     const [filtroTitular, setFiltroTitular] = useState('');
     const [filtroDestino, setFiltroDestino] = useState('');
     const [filtroPagadoMas5Millones, setFiltroPagadoMas5Millones] = useState(false);
 
     useEffect(() => {
-        const datosClientes = [titulares];
+        // Simulación de datos de clientes
+        const datosClientes = [
+            { id: 1, titular: 'Juan Pérez', destino: 'París', pago: 4000000, cantidadPersonas: 2 },
+            { id: 2, titular: 'María García', destino: 'Londres', pago: 6000000, cantidadPersonas: 1 },
+            { id: 3, titular: 'Pedro Gómez', destino: 'Nueva York', pago: 4500000, cantidadPersonas: 3 },
+            { id: 4, titular: 'Ana Martínez', destino: 'Roma', pago: 3500000, cantidadPersonas: 2 },
+            { id: 5, titular: 'Carlos Sánchez', destino: 'Madrid', pago: 7000000, cantidadPersonas: 4 }
+        ];
 
         setClientes(datosClientes);
     }, []);
@@ -56,32 +61,30 @@ function Inicio() {
 
     const clientesFiltrados = filtrarClientes();
 
-  return (
-    <div>
-    <h1>Clientes de Nos Fuimos</h1>
+    return (
+        <div>
+            <h1>Nos Fuimos</h1>
 
-    <form>
-        <label htmlFor="filtroTitular">Filtrar por titular:</label>
-        <input type="text" id="filtroTitular" value={filtroTitular} onChange={handleFiltroTitularChange} />
+            <form>
+                <label htmlFor="filtroTitular">Filtrar por titular:</label>
+                <input type="text" id="filtroTitular" value={filtroTitular} onChange={handleFiltroTitularChange} />
 
-        <label htmlFor="filtroDestino">Filtrar por destino:</label>
-        <input type="text" id="filtroDestino" value={filtroDestino} onChange={handleFiltroDestinoChange} />
+                <label htmlFor="filtroDestino">Filtrar por destino:</label>
+                <input type="text" id="filtroDestino" value={filtroDestino} onChange={handleFiltroDestinoChange} />
 
-        <label htmlFor="filtroPagadoMas5Millones">Pagado más de 5 millones:</label>
-        <input type="button" id="filtroPagadoMas5Millones" checked={filtroPagadoMas5Millones} onChange={handleFiltroPagadoMas5MillonesChange} />
-    </form>
+                <label htmlFor="filtroPagadoMas5Millones">Pagado más de 5 millones:</label>
+                <input type="checkbox" id="filtroPagadoMas5Millones" checked={filtroPagadoMas5Millones} onChange={handleFiltroPagadoMas5MillonesChange} />
+            </form>
 
-    <ul>
-        {clientesFiltrados.map(cliente => (
-            <li key={cliente.id}>
-                Titular: {cliente.titular}, Destino: {cliente.destino}, Pago: {cliente.pago}, Cantidad de personas: {cliente.cantidadPersonas}
-            </li>
-        ))}
-    </ul>
-</div>
-);
+            <ul>
+                {clientesFiltrados.map(cliente => (
+                    <li key={cliente.id}>
+                        Titular: {cliente.titular}, Destino: {cliente.destino}, Pago: {cliente.pago}, Cantidad de personas: {cliente.cantidadPersonas}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }
-  
-
 
 export default Inicio;
