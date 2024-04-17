@@ -67,10 +67,10 @@ function Inicio() {
 
             <form>
                 <label htmlFor="filtroTitular">Filtrar por titular:</label>
-                <input type="text" id="filtroTitular" value={filtroTitular} onChange={handleFiltroTitularChange} />
+                <input className='a' type="text" id="filtroTitular" value={filtroTitular} onChange={handleFiltroTitularChange} />
 
                 <label htmlFor="filtroDestino">Filtrar por destino:</label>
-                <input type="text" id="filtroDestino" value={filtroDestino} onChange={handleFiltroDestinoChange} />
+                <input className='a' type="text" id="filtroDestino" value={filtroDestino} onChange={handleFiltroDestinoChange} />
 
                 <label htmlFor="filtroPagadoMas5Millones">Pagado más de 5 millones:</label>
                 <input type="checkbox" id="filtroPagadoMas5Millones" checked={filtroPagadoMas5Millones} onChange={handleFiltroPagadoMas5MillonesChange} />

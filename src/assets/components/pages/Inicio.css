@@ -19,8 +19,9 @@
     font-weight: bold;
 }
 
-.form input {
-    width: 100%;
+.a {
+    width: 5%;
+    height: 5px;
     padding: 8px;
     margin-bottom: 10px;
     border-radius: 5px;
