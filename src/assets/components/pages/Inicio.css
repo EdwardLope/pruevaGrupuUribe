@@ -1,0 +1,51 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.filters-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.filter-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.filter-checkbox {
+    cursor: pointer;
+}
+
+.client-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.client-item {
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.client-info {
+    margin-right: 10px;
+}
