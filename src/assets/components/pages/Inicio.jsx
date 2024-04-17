@@ -8,9 +8,9 @@ function Inicio() {
 
     useEffect(() => {
         const datosClientes = [
-            { id: 1, titular: 'Juan Pérez', destino: 'París', pago: 4000000, cantidadPersonas: 2 },
+            { id: 1, titular: 'J. Robert Oppenheime', destino: 'Japon', pago: 4000000, cantidadPersonas: 2 },
             { id: 2, titular: 'María García', destino: 'Londres', pago: 6000000, cantidadPersonas: 1 },
-            { id: 3, titular: 'Pedro Gómez', destino: 'Nueva York', pago: 4500000, cantidadPersonas: 3 },
+            { id: 3, titular: 'osama bin laden', destino: 'Nueva York', pago: 4500000, cantidadPersonas: 3 },
             { id: 4, titular: 'Ana Martínez', destino: 'Roma', pago: 3500000, cantidadPersonas: 2 },
             { id: 5, titular: 'Carlos Sánchez', destino: 'Madrid', pago: 7000000, cantidadPersonas: 4 }
         ];
