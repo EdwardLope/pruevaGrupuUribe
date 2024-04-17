@@ -7,7 +7,6 @@ function Inicio() {
     const [filtroPagadoMas5Millones, setFiltroPagadoMas5Millones] = useState(false);
 
     useEffect(() => {
-        // Simulación de datos de clientes
         const datosClientes = [
             { id: 1, titular: 'Juan Pérez', destino: 'París', pago: 4000000, cantidadPersonas: 2 },
             { id: 2, titular: 'María García', destino: 'Londres', pago: 6000000, cantidadPersonas: 1 },
@@ -78,7 +77,7 @@ function Inicio() {
 
             <ul>
                 {clientesFiltrados.map(cliente => (
-                    <li key={cliente.id}>
+                    <li className='b' key={cliente.id}>
                         Titular: {cliente.titular}, Destino: {cliente.destino}, Pago: {cliente.pago}, Cantidad de personas: {cliente.cantidadPersonas}
                     </li>
                 ))}
